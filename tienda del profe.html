@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+
+    <title>TIENDA DEMO</title>
+	
+	<style>
+	
+	.logotienda img{
+	border: 2px dotted orange;
+	border-radius: 60%;
+	}
+	
+	.ttienda{
+		font-family: 'Bungee Shade', cursive;
+	}
+	
+	.cantidad{
+	width: 150px;
+	}
+	
+	.carrito
+	{
+	font-size: 35px;
+	}
+	
+	div {
+	border: 1px dotted blue;
+	}
+
+	</style>
+	<script>
+		funcion calcular();
+			
+  </head>
+  <body>
+    
+	
+		<div class="container">
+		
+			<div class="row">
+					<div class="col-3 align-self-center text-center">
+						<div class="logotienda">
+							<img src="images/logo.jpg">
+						</div>
+					</div>
+					<div class="col-6 align-self-center text-center">
+							<h1 class="ttienda">MI TIENDA</h1>
+					</div>
+					<div class="col-3 align-self-center text-center">
+						<div class="carrito"><i class="fas fa-cart-arrow-down"></i> <span>Carrito<span></div>
+					</div>
+			</div>
+		
+		</div>
+		
+		<div class="container my-4">
+		
+			<div class="row"><!--inicio fila 1-->
+			
+					<div class="col-1"></div>
+					
+					<div class="col-4">
+							<ul class="list-unstyled">
+							  <li class="media">
+								<img class="mr-3" src="images/producto.jpg" alt="Producto">
+								<div class="media-body">
+								  <h5 class="mt-0 mb-1">ITEM #1</h5>
+								  <input type="number" class="cantidad" id="canitem1">
+								  <input type="hidden" id="valitem1" value="500" >
+								</div>
+							  </li>
+							  <li class="media my-4">
+								<img class="mr-3" src="images/producto.jpg" alt="Producto ">
+								<div class="media-body">
+								  <h5 class="mt-0 mb-1">ITEM #2</h5>
+								  <input type="number" class="cantidad" id="canitem2">
+								  <input type="hidden" id="valitem2" value="2000" > 
+								</div>
+							  </li>
+							  <li class="media">
+								<img class="mr-3" src="images/producto.jpg" alt="Producto">
+								<div class="media-body">
+								  <h5 class="mt-0 mb-1">ITEM #3</h5>
+								  <input type="number" class="cantidad" id="canitem3">
+								  <input type="hidden" id="valitem3" value="300" >
+								</div>
+							  </li>
+							</ul>
+					</div>
+					
+					
+					<div class="col-2"></div>
+					
+					<div class="col-4">
+					
+							<ul class="list-unstyled">
+							  <li class="media">
+								<img class="mr-3" src="images/producto.jpg" alt="Producto">
+								<div class="media-body">
+								  <h5 class="mt-0 mb-1">ITEM #4</h5>
+								  <input type="number" class="cantidad" id="canitem4">
+								  <input type="hidden" id="valitem4" value="" > 
+								</div>
+							  </li>
+							  <li class="media my-4">
+								<img class="mr-3" src="images/producto.jpg" alt="Producto ">
+								<div class="media-body">
+								  <h5 class="mt-0 mb-1">ITEM #5</h5>
+								  <input type="number" class="cantidad" id="canitem5">
+								  <input type="hidden" id="valitem5" value="" >
+								</div>
+							  </li>
+							  <li class="media">
+								<img class="mr-3" src="images/producto.jpg" alt="Producto">
+								<div class="media-body">
+								  <h5 class="mt-0 mb-1">ITEM #6</h5>
+								  <input type="number" class="cantidad" id="canitem6">
+								  <input type="hidden" id="valitem6" value="" > 
+								</div>
+							  </li>
+							</ul>
+
+					</div>
+					<div class="col-1">
+					</div>
+			</div><!-- fin fila 1-->
+			
+			<div class="row my-4"><!-- inicio fila 2-->
+			
+				<div class="col-1"></div>
+				
+				<div class="col-5">
+				
+					<div class="form-group row">
+						<label for="txtsubtotal1" class="col-sm-4 col-form-label">SUBTOTAL</label>
+						<div class="col-sm-8">
+						  <input type="number" class="form-control w-50" id="txtsubtotal1" disabled>
+						</div>
+					  </div>
+					  <div class="form-group row">
+						<label for="txtiva1" class="col-sm-4 col-form-label">IVA</label>
+						<div class="col-sm-8">
+						  <input type="number" class="form-control w-50" id="txtiva1" disabled>
+						  <input type="hidden" id="valiva1" value="19">
+						</div>
+					 </div>
+				
+				</div>
+				
+				
+				<div class="col-5">
+				
+				
+					<div class="form-group row">
+						<label for="txtsubtotal2" class="col-sm-4 col-form-label">SUBTOTAL</label>
+						<div class="col-sm-8">
+						  <input type="number" class="form-control w-50" id="txtsubtotal2" disabled>
+						</div>
+					  </div>
+					  <div class="form-group row">
+						<label for="txtiva2" class="col-sm-4 col-form-label">IVA</label>
+						<div class="col-sm-8">
+						  <input type="number" class="form-control w-50" id="txtiva2" disabled>
+						  <input type="hidden" id="valiva2" value="10">
+						</div>
+					 </div>
+				
+				
+				</div>
+				
+				<div class="col-1"></div>
+				
+			
+			</div><!--fin fila 2-->
+			
+			<div class="row my-4"><!-- inicio fila 3-->
+			
+			<div class="col-2"></div>
+			
+			<div class="col-3 align-self-center text-center">
+			
+				<h2><label>FACTURA</label><h2>
+				<button type="submit" class="btn btn-primary" onclick="calcular();">CALCULAR</button>
+			
+					
+			</div>
+			
+			<div class="col-1"></div>
+			
+			<div class="col-4">
+			
+			
+				<div class="form-group row">
+						<label for="subtotal" class="col-sm-4 col-form-label">SUBTOTAL</label>
+						<div class="col-sm-8">
+							<input type="number" class="form-control" id="subtotal" placeholder="0000" disabled>
+						</div>
+				</div>
+				<div class="form-group row">
+						<label for="ivafinal" class="col-sm-4 col-form-label">IVA</label>
+						<div class="col-sm-8">
+							<input type="number" class="form-control" id="ivafinal" placeholder="0000" disabled>
+						</div>
+				</div>
+				<div class="form-group row">
+						<label for="totalfactura" class="col-sm-4 col-form-label">TOTAL</label>
+						<div class="col-sm-8">
+							<input type="number" class="form-control w-50" id="totalfactura" placeholder="0000" disabled>
+						</div>
+				</div>
+
+			</div>
+			
+			<div class="col-2"></div>
+		
+			
+			</div><!--fin fila 3-->
+			
+		</div>
+		<div class="container my-4">
+		
+			<div class="row">
+			
+					<div class="col align-self-center text-center">
+						
+						<h2>2018 &copy; MiTienda.com </h2>
+					
+					</div>
+			
+			
+			</div>
+		
+		</div>
+  </body>
+</html>
